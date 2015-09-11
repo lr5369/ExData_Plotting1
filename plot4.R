@@ -1,11 +1,11 @@
-
+# get data
 source("get_data.R")
 # open the png device, create a 2x2 matrix of plots and close the device.
 
 
 png(filename = "plot4.png", width = 480, height = 480, units = "px")
 par (mfrow = c(2,2), mar = c(4,4,2,1), oma = c(0,0,2,0))
-with(dt, {
+with(data, {
   plot(DateTime, Global_active_power, xlab="", ylab="Global Active Power", type="l")
   plot(DateTime, Voltage, xlab="datetime", ylab="Voltage", type="l")
   cols = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3")
